@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.html {
+    font-family: "Comme", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100; /*  <weight>: Use a value from 100 to 900 */
+    font-style: normal;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.grid-item {
+    border: solid 1px black;
+}
+
+header {
+    position: relative;
+    background-color: grey;
+    /* grid-column: 1/-1; */
+    height: 5em
+}
+
+footer {
+    bottom: 0;
+    /* grid-column: 1 / -1; */
+    height: 5em;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Navigation */
+nav{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+nav ul{
+    text-align: center;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    height: 50px;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Reuseable style classes */
+.indent{
+    text-indent: 2em;
+}
+
+.center {
+    text-align: center;
+}
