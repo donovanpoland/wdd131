@@ -6,7 +6,6 @@
 
 .html {
     font-family: "Comme", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 100; /*  <weight>: Use a value from 100 to 900 */
     font-style: normal;
 }
