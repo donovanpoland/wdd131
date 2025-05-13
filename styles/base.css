@@ -34,10 +34,6 @@
     padding: .5em;
 }
 
-/* .card p{
-    background-color: transparent;
-} */
-
 .card-1{
     grid-column: 1/3;
 }
@@ -118,8 +114,6 @@
     align-items: center;
     text-align: left;
 }
-
-
 
 /* Navigation */
 
