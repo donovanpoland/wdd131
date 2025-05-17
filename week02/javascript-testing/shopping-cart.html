@@ -1,0 +1,100 @@
+<!-- Set the language for screen readers and SEO -->
+<html lang="en-US">
+
+<head>
+    <!-- Set character encoding to UTF-8 for international support -->
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport for mobile devices -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the web page (shown in browser tab) -->
+    <title>Shopping list example</title>
+
+    <!-- Internal CSS to style the list and buttons -->
+    <style>
+        /* Add spacing between each list item */
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Style buttons inside list items */
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main heading -->
+    <h1>My shopping list</h1>
+
+    <!-- Input section to add new list items -->
+    <div>
+        <!-- Label tied to the input via 'for' and 'id' -->
+        <label for="item">Enter a new
+            item:</label>
+
+        <!-- Input box to type item name -->
+        <input type="text"
+            name="item"
+            id="item">
+
+        <!-- Button to trigger item addition -->
+        <button>Add item</button>
+    </div>
+
+    <!-- Empty unordered list to hold shopping items -->
+    <ul>
+    </ul>
+
+    <!-- JavaScript block to power list functionality -->
+    <script>
+        // Get references to the list, input, and button elements
+        const list = document.querySelector('ul');
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+
+        // Listen for click events on the "Add item" button
+        button.addEventListener('click', () => {
+            // Get the current value typed into the input
+            const myItem = input.value;
+
+            // Clear the input field
+            input.value = '';
+
+            // Create new elements: <li>, <span> (text), and <button> (delete)
+            const listItem = document.createElement('li');
+            const listText = document.createElement('span');
+            const listBtn = document.createElement('button');
+
+            // Add the <span> and <button> to the <li>
+            listItem.appendChild(listText);
+            listItem.appendChild(listBtn);
+
+            // Set the span's text to the typed item
+            listText.textContent = myItem;
+
+            // Set the button's label to "Delete"
+            listBtn.textContent = 'Delete';
+
+            // Add the complete list item to the <ul>
+            list.appendChild(listItem);
+
+            // Add event listener to the delete button
+            // When clicked, it removes the entire <li> from the list
+            listBtn.addEventListener('click', () => {
+                list.removeChild(listItem);
+            });
+
+            // Return focus to the input field for quick next entry
+            input.focus();
+        });
+    </script>
+</body>
+
+</html>
