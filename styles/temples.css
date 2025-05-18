@@ -44,7 +44,7 @@ h1{
         background-color: #333;
         color: white;
     }
-    
+
 }
 
 main{
@@ -66,6 +66,11 @@ main{
     border: 1px black solid;
     padding: 1em;
     place-items: center;
+}
+
+.temple-album h2{
+    padding-top:.5em;
+    grid-column: 1/-1;
 }
 
 .temple-album figcaption{
