@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.html {
+    font-family: "Comme", sans-serif;
+    font-weight: 100;
+    /*  <weight>: Use a value from 100 to 900 */
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    max-width: 1200px;
+    height: 100vh;
+    position: relative;
+    flex-direction: column;
+}
+
+header{
+    background-color: #333;
+    height: 50px;
+}
+
+h1{
+    font-size: 2rem;
+    padding: .5em;
+    position: fixed;
+    top: 0;
+    color: white;
+    background-color: #333;
+    width: 100vw;
+}
+
+/* if less than 300 pixels hide the h1 */
+@media (max-width:320px){
+    h1{
+        display: none;
+    }
+
+    main{
+        background-color: #333;
+        color: white;
+    }
+    
+}
+
+main{
+    width: 100%;
+}
+
+@media (max-width:700px){
+    main{
+        padding-top: 4em;
+    }
+}
+
+.temple-album{
+    flex: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px black solid;
+    padding: 1em;
+    place-items: center;
+}
+
+.temple-album figcaption{
+    text-align: center;
+}
+
+.temple-album img{
+    overflow: hidden;
+    border-radius: 1em;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* small view navigation */
+#menu {
+    display: block;
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: white;
+    border: 2px white solid;
+    border-radius: .2em;
+    width: 2em;
+    padding: .1em;
+    position: fixed;
+    top: 0.1em;
+    right: .5em;
+    z-index: 1;
+}
+
+#menu::before {
+    content: "☰";
+
+}
+
+#menu.open::before {
+    content: "X";
+    padding: 0;
+}
+
+.navigation {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #333;
+    color: #fff;
+    z-index: 1;
+    max-width: 5rem
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    margin-right: 3em;
+    margin-top: .75em;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 1em;
+    transition: .5s;
+    width: 100%;
+}
+
+.navigation a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    text-align: center;
+}

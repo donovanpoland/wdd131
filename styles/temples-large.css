@@ -1,0 +1,33 @@
+
+@media (min-width: 48em) {
+
+    main{
+        padding: 0;
+    }
+
+    #menu {
+        /* hide hamburger button */
+        display: none;
+    }
+
+    .navigation {
+        top: 0;
+        flex-direction: row;
+        justify-content: right;
+        background-color: #333;
+    }
+
+    .navigation a {
+        font-size: 1rem;
+        display: block;
+        flex: 1 1 100%;
+        color: white;
+        border-radius: 0;
+    }
+
+    h1{
+        color: white;
+        display: block;
+        max-width: 1200px;
+    }
+}
