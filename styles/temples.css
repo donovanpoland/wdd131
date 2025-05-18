@@ -13,7 +13,7 @@
 
 body{
     display: flex;
-    max-width: 1200px;
+    max-width: 2000px;
     height: 100vh;
     position: relative;
     flex-direction: column;
@@ -31,7 +31,7 @@ h1{
     top: 0;
     color: white;
     background-color: #333;
-    width: 100vw;
+    width: 100%;
 }
 
 /* if less than 300 pixels hide the h1 */
@@ -96,7 +96,7 @@ main{
     border-radius: .2em;
     width: 2em;
     padding: .1em;
-    position: fixed;
+    position: absolute;
     top: 0.1em;
     right: .5em;
     z-index: 1;
