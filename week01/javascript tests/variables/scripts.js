@@ -34,6 +34,7 @@ buttonA.onclick = () => {
   count += 1;
 };
 
+
 //buttonA.onclick is a new variable that equals function() {code here} - function is now created inside the variable
 // we use () for unnamed functions its a shorthand way of using a function, the shorthand must have the arrow =>
 // im creating a function inside the variable nonamefunction(no parameters) => {code goes here} is equal to () => {

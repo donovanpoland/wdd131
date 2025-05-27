@@ -13,7 +13,7 @@ button.addEventListener("click", function () {
   const userInput = input.value;
   // check if input is blank
   // remove white space from input before checking if blank
-  if (input.value.trim() != "") {
+  if (userInput.trim() != "") {
     // create a new list item
     const listItem = document.createElement("li");
     //create a span to hold text

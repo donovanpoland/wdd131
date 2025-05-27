@@ -1,0 +1,57 @@
+:root{
+    --prime-col: #FF0000;
+    --second-col: #008000;
+    --accent1: #FFFF00;
+    --accent2: #000000;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--prime-col);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    background-color: var(--second-col);
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+
+}
+
+h1{
+    text-align: center;
+    padding: .5em;
+}
+
+section{
+    background-color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+footer{
+    text-align: center;
+    padding: 1em;
+}
