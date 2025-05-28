@@ -1,6 +1,6 @@
 :root{
-    --prime-col: #FF0000;
-    --second-col: #008000;
+    --prime-col: #008000;
+    --second-col: #FF0000;
     --accent1: #FFFF00;
     --accent2: #000000;
     --max-width: 1200px;
@@ -45,13 +45,18 @@ h1{
 }
 
 section{
-    background-color: #FFFFFF;
+    background: rgba(255, 255, 0, 0.9);
     width: 100%;
     text-align: center;
     border: 1px solid black;
+}
+
+ul{
+    list-style: none;
 }
 
 footer{
     text-align: center;
     padding: 1em;
 }
+

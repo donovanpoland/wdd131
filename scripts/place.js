@@ -1,15 +1,33 @@
 //load js after Dom is loaded
 window.addEventListener("DOMContentLoaded", () => {
-    const windSpeed = 5;
-    const temperature = 85;
+    const countryData = {
+      area: "238,540 sq km",
+      population: "33,787,914",
+      capital: "Accra",
+      languages: "English(official), Twi, Ewe, Abron, dagbani, Akan",
+      currency: "ghanaian Cedi",
+      timezone: "UTC+00:00",
+      callingCode: "+233",
+      tld: ".gh",
+      temperatureC: 96,
+      windKmh: 13,
+      humidity: "92%",
+      conditions: "Cloudy",
+    };
 
     // Call on page load
-    getYearAndLastModified();
+    // update title of image
     updateImageTitle();
     window.addEventListener("resize", updateImageTitle);
+    //add lists to page
+    displayCountryWeather(countryData);
+    displayCountryData(countryData);
+    //get timestamps
+    getYearAndLastModified();
+   
 });
 
-//update image title upon loading of a different screen size
+// update image title upon loading of a different screen size
 function updateImageTitle() {
     const img = document.getElementById("hero-img");
     const width = window.innerWidth;
@@ -37,9 +55,15 @@ function getYearAndLastModified() {
 }
 
 // calculate the windchill factor
-function calculateWindChill(temperature, windSpeed) {
+function calculateWindChill(tempC, windKmh) {
+
+  //convert from c to f for formula
+  const tempF = (tempC * 9) / 5 + 32;
+  //convert wind speed from kmh to mph for formula
+  const windMph = windKmh / 1.609;
+
   // Only calculate if the conditions are viable
-  if (temperature <= 50 && windSpeed > 3) {
+  if (tempF <= 50 && windMph > 3) {
     function windSpeedFormula(speed) {
       return Math.pow(speed, 0.16);
     }
@@ -53,18 +77,63 @@ function calculateWindChill(temperature, windSpeed) {
         0.4275 * temp * adjustedSpeed;
       return windChill;
     }
-    const windChill = windChillFormula(temperature, windSpeed);
+    //get windchill factor
+    const windChillF = windChillFormula(tempF, windMph);
+    //convert back to celsius
+    const windChillC = (windChillF - 32) * 5 / 9;
 
-    return `${windChill.toFixed(2)} °F`;
+    return `${windChillC.toFixed(2)} °C`;
   } else {
     // Conditions not met for valid wind chill
-    return "N/A (Conditions not met)";
+    return "N/A";
   }
 }
 
-//create list items
-function createListItem() {
-    const weatherList = document.querySelector("#weather-list");
+// create list items for weather list
+function displayCountryWeather(data) {
+  const weatherList = document.querySelector("#weather-list");
+  weatherList.innerHTML = "";
+
+  const windChill = calculateWindChill(data.temperatureC, data.windKmh);
+
+  const items = [
+    `Temperature: ${data.temperatureC} °C`,
+    `Conditions: ${data.conditions}`,
+    `Wind: ${data.windKmh} km/h`,
+    `Wind Chill: ${windChill}`
+  ];
+
+  //add items to list
+  items.forEach(text => {
+    const weatherItem = document.createElement("li");
+    weatherItem.textContent = text;
+    weatherList.appendChild(weatherItem);
+  });
+}
+
+// create list items for data list 
+function displayCountryData(data) {
+    
     const dataList = document.querySelector("#data-list");
+  
+    dataList.innerHTML = "";
+
+    const items = [
+      `Area: ${data.area}`,
+      `Population: ${data.population}`,
+      `Capital: ${data.capital}`,
+      `Languages: ${data.languages}`,
+      `Currency: ${data.currency}`,
+      `Time Zone: ${data.timezone}`,
+      `Calling Code: ${data.callingCode}`,
+      `Internet TLD: ${data.tld}`
+    ];
+
+      //add items to list
+      items.forEach((text) => {
+        const dataItem = document.createElement("li");
+        dataItem.textContent = text;
+        dataList.appendChild(dataItem);
+    });
 }
 
