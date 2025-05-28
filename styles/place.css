@@ -53,6 +53,8 @@ section{
 
 ul{
     list-style: none;
+    padding: 1em;
+    line-height: 140%;
 }
 
 footer{

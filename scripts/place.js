@@ -2,17 +2,17 @@
 window.addEventListener("DOMContentLoaded", () => {
     const countryData = {
       area: "238,540 sq km",
-      population: "33,787,914",
+      population: "33,787,914 (2023)",
       capital: "Accra",
-      languages: "English(official), Twi, Ewe, Abron, dagbani, Akan",
-      currency: "ghanaian Cedi",
+      languages: "English(official), Twi, Ewe, Akan",
+      currency: "Ghanaian Cedi",
       timezone: "UTC+00:00",
       callingCode: "+233",
       tld: ".gh",
-      temperatureC: 96,
-      windKmh: 13,
+      temperatureC: 96, //change this number to check windchill calculation
+      windKmh: 13, //change this number to check windchill calculation
       humidity: "92%",
-      conditions: "Cloudy",
+      conditions: "Partly Cloudy",
     };
 
     // Call on page load
