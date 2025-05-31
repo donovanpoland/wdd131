@@ -25,13 +25,18 @@
 
 
     .data {
-        top: 5em;
+        top: 7em;
         left: 2em;
     }
     
     .weather {
         bottom: 2em;
         right: 2em;
+    }
+
+    .weather img{
+        display: none;
+
     }
 
     .large{
@@ -51,14 +56,9 @@
         justify-content: center;
     }
 
-    .weather-icon{
-        display: contents;
-    }
-
-    .weather-icon img {
+    .weather h2::after{
+        content: "⛅";
         margin-left: 1em;
-        width: 1.2em;
-        height: auto;   
     }
 }
 

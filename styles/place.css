@@ -38,6 +38,7 @@ main{
 h1{
     text-align: center;
     padding: .5em;
+    font-size: 2em;
 }
 
 section{
@@ -52,11 +53,13 @@ section{
     font-size: smaller;
 }
 
-.weather-icon {
-    display: block;
-    margin: 0.5em auto 0;
+.weather img{
     width: 64px;
-    height: 64px;
+    height: auto;
+}
+
+h2{
+    font-size: 1.5em;
 }
 
 ul{
