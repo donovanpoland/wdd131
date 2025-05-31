@@ -9,19 +9,20 @@ window.addEventListener("DOMContentLoaded", () => {
       timezone: "UTC+00:00",
       callingCode: "+233",
       tld: ".gh",
+      currentTime: "",
       temperatureC: 96, //change this number to check windchill calculation
       windKmh: 13, //change this number to check windchill calculation
       humidity: "92%",
       conditions: "Partly Cloudy",
     };
 
-    // Call on page load
-    // update title of image
+    // Call functions
+    // update title of image depending on screen size
     updateImageTitle();
     window.addEventListener("resize", updateImageTitle);
     //add lists to page
-    displayCountryWeather(countryData);
     displayCountryData(countryData);
+    displayCountryWeather(countryData);
     //get timestamps
     getYearAndLastModified();
    
@@ -149,6 +150,13 @@ function displayCountryWeather(data) {
 
 // create list items for data list 
 function displayCountryData(data) {
+
+  const ghanaTime = new Date().toLocaleString("en-US", {
+    timeZone: "Africa/Accra",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
     
     const dataList = document.querySelector("#data-list");
   
@@ -162,7 +170,8 @@ function displayCountryData(data) {
       `Currency: ${data.currency}`,
       `Time Zone: ${data.timezone}`,
       `Calling Code: ${data.callingCode}`,
-      `Internet TLD: ${data.tld}`
+      `Internet TLD: ${data.tld}`,
+      `Current Time (Ghana): ${ghanaTime}`
     ];
 
       //add items to list
