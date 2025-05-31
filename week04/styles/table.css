@@ -1,0 +1,69 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    padding: 1em;
+    text-wrap: nowrap;  
+}
+
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px ;
+    border: 1px solid hsl(0, 0%, 50%);
+    /* settings for children of table */
+
+    caption {
+        padding: 10px;
+        caption-side: bottom;
+        color: var(--back);
+        font-size: .85rem; 
+    }
+
+    /* basic setting for both table head and table body content*/
+    th, td {
+        padding: .5rem 1rem;
+        border: 1px solid black;
+    }
+
+        /* set table head */
+        thead {
+            color: #fff;
+            background: #000;
+    
+            /* set the table head specific content */
+            th {
+                padding: 1rem;
+                font-size: larger;
+            }
+            
+            /* set the last table row in the table head */
+            tr:nth-last-child(1) {
+                background-color: #333;
+            }   
+        }
+
+    tbody tr:nth-child(even) {
+        background-color: #eee;
+    } 
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left:42%;
+    text-align: center;
+    padding: 1em;
+}
+
+.center{
+    text-align: center;
+}
+
+.blank {
+    background-color: #000; }

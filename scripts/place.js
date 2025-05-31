@@ -10,9 +10,9 @@ window.addEventListener("DOMContentLoaded", () => {
       callingCode: "+233",
       tld: ".gh",
       currentTime: "",
-      temperatureC: 96, //change this number to check windchill calculation
-      windKmh: 13, //change this number to check windchill calculation
-      humidity: "92%",
+      //change these numbers to check windchill calculation c/kml
+      temperatureC: 96,
+      windKmh: 13,
       conditions: "Partly Cloudy",
     };
 
@@ -84,9 +84,14 @@ function getYearAndLastModified() {
       timeZone: "UTC",
     });
 
+    //Add GMT offset
+    const offsetMinutes = today.getTimezoneOffset();
+    const offsetHours = -offsetMinutes / 60;
+    const formattedOffset = `GMT${offsetHours >= 0 ? "+" : ""}${offsetHours}`;
+
     //display the info
     lastModified.innerHTML =
-      `Last modified: ${localFormatted} GMT<br>` +
+      `Last modified: ${localFormatted} ${formattedOffset}<br>` +
       `Last modified: ${utcFormatted} UTC`;
   } 
 }

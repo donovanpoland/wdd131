@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    margin: 1em;
+    display: block;
+    border: thin black solid;
+    border-radius: 1em;
+    overflow: hidden;
+    width: 100%;
+    background: black;
+    animation: fade 15s;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+
+    }  
+}
