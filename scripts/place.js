@@ -37,10 +37,7 @@ function updateImageTitle() {
         img.title = "largest image";
         console.log("largest image displayed");
     } else if (width >= 750) {
-        img.title = "medium image 1";
-        console.log("medium image displayed");
-    } else if (width >= 500) {
-        img.title = "medium image 2";
+        img.title = "medium image";
         console.log("medium image displayed");
     } else {
         img.title = "smallest image";
