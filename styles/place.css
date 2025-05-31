@@ -3,7 +3,7 @@
     --second-col: #FF0000;
     --accent1: #FFFF00;
     --accent2: #000000;
-    --max-width: 1200px;
+    --max-width: 1050px;
 }
 
 * {
@@ -19,8 +19,6 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    max-width: var(--max-width);
-    margin: 0 auto;
     align-items: center;
     justify-content: center;
 }
@@ -28,15 +26,13 @@ main{
 .hero{
     width: 100%;
     height: auto;
-    object-fit: fill;
     background-color: var(--second-col);
 }
 
 .hero img{
     width: 100%;
     height: auto;
-    object-fit: fill;
-
+    object-fit: cover;
 }
 
 h1{
@@ -45,10 +41,22 @@ h1{
 }
 
 section{
-    background: rgba(255, 255, 0, 0.9);
-    width: 100%;
+    background-color: var(--accent1);
     text-align: center;
     border: 1px solid black;
+    max-height: 800px;
+}
+
+.weather, .data{
+    width: 100%;
+    font-size: smaller;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0.5em auto 0;
+    width: 64px;
+    height: 64px;
 }
 
 ul{
@@ -58,8 +66,11 @@ ul{
 }
 
 footer{
+    padding-top: 10em;
+    position: relative;
     text-align: center;
     padding: 1em;
+    color: white;
 }
 
 a{

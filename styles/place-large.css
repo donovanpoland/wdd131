@@ -1,0 +1,64 @@
+@media (min-width: 40em){
+
+    main{
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            max-width: var(--max-width);
+    }
+
+    .hero {
+        border-radius: 0;
+        grid-area: hero;
+        width: 100%;
+        overflow: hidden;
+        position: relative; 
+    }
+
+    .data, .weather {
+        position: absolute;
+        width: max-content;
+        background: rgba(255, 255, 0, 0.7);
+        border-radius: .5em;
+    }
+
+
+    .data {
+        top: 5em;
+        left: 2em;
+    }
+    
+    .weather {
+        bottom: 2em;
+        right: 2em;
+    }
+
+    .large{
+        position: relative;
+        padding-top: 2.5em;
+    }
+
+    h2{
+        background-color: var(--second-col);
+        position: absolute;
+        width: 100%;
+        top: .5em;
+        right: .5em;
+        border-radius: .5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .weather-icon{
+        display: contents;
+    }
+
+    .weather-icon img {
+        margin-left: 1em;
+        width: 1.2em;
+        height: auto;   
+    }
+}
+
+

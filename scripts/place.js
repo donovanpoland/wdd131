@@ -36,8 +36,11 @@ function updateImageTitle() {
     if (width >= 1000) {
         img.title = "largest image";
         console.log("largest image displayed");
+    } else if (width >= 750) {
+        img.title = "medium image 1";
+        console.log("medium image displayed");
     } else if (width >= 500) {
-        img.title = "medium image";
+        img.title = "medium image 2";
         console.log("medium image displayed");
     } else {
         img.title = "smallest image";
@@ -155,35 +158,52 @@ function displayCountryWeather(data) {
 
 // create list items for data list 
 function displayCountryData(data) {
+  const dataList = document.querySelector("#data-list");
 
-  const ghanaTime = new Date().toLocaleString("en-US", {
-    timeZone: "Africa/Accra",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
+  // Clear the list before adding new items
+  dataList.innerHTML = "";
+
+  // List of static data items
+  const items = [
+    `Area: ${data.area}`,
+    `Population: ${data.population}`,
+    `Capital: ${data.capital}`,
+    `Languages: ${data.languages}`,
+    `Currency: ${data.currency}`,
+    `Time Zone: ${data.timezone}`,
+    `Calling Code: ${data.callingCode}`,
+    `Internet TLD: ${data.tld}`,
+  ];
+
+  // Add static data to list
+  items.forEach((text) => {
+    const dataItem = document.createElement("li");
+    dataItem.textContent = text;
+    dataList.appendChild(dataItem);
   });
-    
-    const dataList = document.querySelector("#data-list");
-  
-    dataList.innerHTML = "";
 
-    const items = [
-      `Area: ${data.area}`,
-      `Population: ${data.population}`,
-      `Capital: ${data.capital}`,
-      `Languages: ${data.languages}`,
-      `Currency: ${data.currency}`,
-      `Time Zone: ${data.timezone}`,
-      `Calling Code: ${data.callingCode}`,
-      `Internet TLD: ${data.tld}`,
-      `Current Time (Ghana): ${ghanaTime}`
-    ];
+  // Create and append dynamic Ghana time item
+  const ghanaTimeItem = document.createElement("li");
+  ghanaTimeItem.innerHTML = `Current Time (Ghana): <span id="ghana-time"></span>`;
+  dataList.appendChild(ghanaTimeItem);
 
-      //add items to list
-      items.forEach((text) => {
-        const dataItem = document.createElement("li");
-        dataItem.textContent = text;
-        dataList.appendChild(dataItem);
+  // Function to update Ghana time
+  function updateGhanaTime() {
+    const ghanaTime = new Date().toLocaleString("en-US", {
+      timeZone: "Africa/Accra",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
     });
+
+    const timeDisplay = document.querySelector("#ghana-time");
+    if (timeDisplay) {
+      timeDisplay.textContent = ghanaTime;
+    }
+  }
+
+  // Run once immediately and then every 30 seconds
+  updateGhanaTime();
+  setInterval(updateGhanaTime, 30000);
 }
 

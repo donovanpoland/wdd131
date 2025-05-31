@@ -8,21 +8,23 @@
     <meta name="author" content="Donovan Poland">
     <meta name="description" content="WDD 131 - Country Page - Ghana - Donovan Poland">
     <meta name="robots" content="index, follow">
-    <meta http-equiv="refresh"
-        content="60">
     <!-- Scripts -->
     <script src="scripts/place.js" defer></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
     <!-- Font links-->
     <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+        href="https://fonts.googleapis.com" 
+        loading="lazy">
     <link rel="preconnect"
         href="https://fonts.gstatic.com"
-        crossorigin>
+        crossorigin
+        loading="lazy">
     <link
         href="https://fonts.googleapis.com/css2?family=Comme:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+        loading="lazy">
 </head>
 <body>
 <main>
@@ -41,31 +43,46 @@
         <picture>
             <source
                 media="(min-width: 1000px)"
-                srcset="images/ghana/Ghana-hero-large.webp">
+                srcset="images/ghana/ghana-hero-1000.webp">
+            <source 
+                media="(min-width: 750px)"
+                srcset="images/ghana/ghana-hero-750.webp">
             <source
                 media="(min-width: 500px)"
-                srcset="images/ghana/Ghana-hero-med.webp">
-            <img src="images/ghana/Ghana-hero-small.webp"
+                srcset="images/ghana/ghana-hero-500.webp">
+            <img src="images/ghana/ghana-hero-250.webp"
                 alt="Ghana Archway"
-                width="500"
-                height="250"
+                width="250"
+                height="125"
                 title="smallest image"
                 id="hero-img">
         </picture>
-    </section>
+    
     <section class="data">
-        <h2>Data</h2>
-        <ul id="data-list">
-            <!-- List insert from js here -->
-        </ul>
+        <div class="large">
+            <h2>Data</h2>
+            <ul id="data-list">
+                <!-- List insert from js here -->
+            </ul>
+        </div>
     </section>
     <section class="weather">
-        <h2>Weather</h2>
-        <img src="images/ghana/weather-icon.svg" alt="Weather Icon">
-        <ul id="weather-list">
-            <!-- List insert from js here -->
-        </ul>
+        <div class="large">
+            <h2>Weather
+                <picture class="weather-icon">
+                    <source media="(min-width: 640px)"
+                        srcset="images/ghana/weather-icon-large-screen.svg">
+                    <img src="images/ghana/weather-icon.svg"
+                        alt="Weather Icon"
+                        width="64" height="64">
+                </picture>
+            </h2>
+            <ul id="weather-list">
+                <!-- List insert from js here -->
+            </ul>
+        </div>
     </section>
+</section>
 </main>
 <footer>
     <p>&copy; <span
@@ -74,9 +91,9 @@
     <p><span id="last-modified"></span>
     </p>
     <p>Photo by <a
-        href="https://unsplash.com/@ife_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ifeoluwa
+        href="https://unsplash.com/@ife_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Ifeoluwa
         A.</a> on <a
-        href="https://unsplash.com/photos/white-concrete-building-with-flag-on-top-during-daytime--CgUhaShACE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        href="https://unsplash.com/photos/white-concrete-building-with-flag-on-top-during-daytime--CgUhaShACE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
     </p>
 </footer>
 </body>
