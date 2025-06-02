@@ -1,0 +1,64 @@
+
+@media (min-width: 51em) {
+
+    #menu {
+        /* hide hamburger button */
+        display: none;
+    }
+
+    .navigation {
+        top: 0;
+        flex-direction: row;
+        justify-content: right;
+        background-color: #333;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .navigation a {
+        font-size: 1rem;
+        display: block;
+        flex: 1 1 100%;
+        color: white;
+        border-radius: 0;
+    }
+
+    h1{
+        color: white;
+        display: block;
+        max-width: 2000px;
+    }
+
+    .load-more {
+        grid-row-start: 4;
+    }
+
+    .temple{
+        min-height: 360px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .load-more {
+            grid-row-start: 6;
+        }
+}
+
+
+/* if less than 320 pixels hide the h1 */
+@media (max-width:320px) {
+    h1 {
+        position: absolute;
+        top: 75px;
+        text-wrap: nowrap;
+    }
+
+    h2 {
+        margin-top: 2.5em;
+    }
+
+    main {
+        background-color: #333;
+        color: white;
+    }
+}
