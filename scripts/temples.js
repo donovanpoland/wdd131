@@ -102,7 +102,7 @@ const temples = [
   //load more variables
   let currentTemples = [];
   let currentIndex = 0;
-  const batchSize = 6;
+  const batchSize = 8;
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -187,8 +187,15 @@ function hamburgerMenu() {
   window.addEventListener("resize", function () {
     if (window.innerWidth > 750) {
       hamButton.classList.remove("open");
+      navigation.classList.remove("open");
       hamButton.setAttribute("title", "Open Menu");
     }
+  });
+
+  window.addEventListener("scroll", function () {
+    hamButton.classList.remove("open");
+    navigation.classList.remove("open");
+    hamButton.setAttribute("title", "Open Menu");
   });
 }
 
@@ -267,6 +274,8 @@ function GenerateTemplesBatch(temples) {
       image.setAttribute("loading", "lazy");
       image.setAttribute("width", "300");
       image.setAttribute("height", "250");
+      //reduce cookies
+      image.setAttribute("referrerpolicy", "no-referrer");
 
       //create temple data
       const dataList = GenerateTempleData(temple);
