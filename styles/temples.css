@@ -46,9 +46,9 @@ main{
 }
 
 .temple-album{
-    flex: auto;
+    /* flex: auto; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
     background: rgba(0, 0, 0, 0.3);
     border: 1px black solid;
@@ -61,11 +61,11 @@ main{
     grid-column: 1/-1;
 }
 
-.temple-album figcaption{
+.temple figcaption{
     text-align: center;
 }
 
-.temple-album img{
+.temple img{
     overflow: hidden;
     border-radius: 1em;
     width: 100%;
