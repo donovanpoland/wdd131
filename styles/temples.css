@@ -46,14 +46,13 @@ main{
 }
 
 .temple-album{
-    /* flex: auto; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
     background: rgba(0, 0, 0, 0.3);
     border: 1px black solid;
-    padding: 1em;
     place-items: center;
+    padding: 1em;
 }
 
 .temple-album h2{
@@ -79,7 +78,8 @@ main{
     padding: .5em;
     max-height: none;
     height: auto;
-    width: 100%;
+    /* width: 100%; */
+    max-width: 300px;
     transition: .2s;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
     transition: box-shadow .3s ease;
