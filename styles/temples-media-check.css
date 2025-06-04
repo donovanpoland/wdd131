@@ -38,12 +38,6 @@
     }
 }
 
-@media (min-width: 1000px) {
-    .load-more {
-        grid-row-start: 6;
-        }
-}
-
 
 /* if less than 320 pixels hide the h1 */
 @media (max-width:320px) {

@@ -62,7 +62,7 @@ const temples = [
     dedicated: "1995, January, 8",
     areaSF: 104000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/800x500/bountiful-temple-766350-wallpaper.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/320x200/bountiful-temple-766350-wallpaper.jpg",
   },
   {
     templeName: "Accra Ghana",
@@ -70,7 +70,7 @@ const temples = [
     dedicated: "2004, January, 11",
     areaSF: 17500,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x225/accra-ghana-temple-detail-249022-2400x1200.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/320x180/accra-ghana-temple-detail-249022-2400x1200.jpg",
   },
   {
     templeName: "Salt Lake",
@@ -78,7 +78,7 @@ const temples = [
     dedicated: "1893, April, 6",
     areaSF: 382207,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/800x500/salt-lake-temple-37762.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/320x200/slctemple7.jpg",
   },
   {
     templeName: "San Diego",
@@ -86,7 +86,7 @@ const temples = [
     dedicated: "1993, April, 25",
     areaSF: 72000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/800x500/san-diego-temple-765109-wallpaper.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/320x200/san-diego-mormon-temple-1164678-wallpaper.jpg",
   },
   {
     templeName: "Portland Oregon",
@@ -94,7 +94,7 @@ const temples = [
     dedicated: "1989, August, 19",
     areaSF: 80500,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/portland-oregon/2018/800x500/Portland-Oregon-Temple10.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/portland-oregon/320x200/temple-spires-772768-wallpaper.jpg",
   },
   // Add more temple objects here...
 ];
@@ -102,7 +102,7 @@ const temples = [
   //load more variables
   let currentTemples = [];
   let currentIndex = 0;
-  const batchSize = 8;
+  const batchSize = 10;
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -117,12 +117,13 @@ window.addEventListener("DOMContentLoaded", () => {
   GenerateTemplesBatch(currentTemples);
   //enable filtering
   checkFilter(temples);
-
+  document.querySelector(`.load-more`).style.gridRowStart = batchSize;
   // Add event listener to the "Load More" button
   document.getElementById("load-more").addEventListener("click", () => {
     GenerateTemplesBatch(currentTemples);
   });
 });
+
 
 function getDedicatedYear(temple) {
   return parseInt(temple.dedicated.split(",")[0].trim(), 10);
