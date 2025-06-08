@@ -1,0 +1,133 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+    /* <weight>: Use a value from 100 to 900 */
+    font-weight: 100;
+    font-style: normal;
+}
+
+h1, h2, h3{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.code{
+    font-family: "Source Code Pro", monospace;
+    /* <weight>: Use a value from 200 to 900 */
+    font-weight: 200;
+    font-style: normal;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    gap: 1em;
+    margin: 1rem auto;
+}
+
+section{
+    border: 1px black solid;
+    border-radius: 1em;
+    padding: .5em;
+    line-height: 1.5;
+}
+
+ul{
+    margin-left: 2em;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.colors{
+    color: #e6e6e6;
+    background-color: #2a2a2a;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    border: 3px #90e0ef solid;
+    padding: 1.5em;
+}
+
+.colors section{
+    border: 1px #90e0ef solid;
+    border-radius: 0.75em;
+    padding: 1em;
+    box-shadow: 0 0 10px #90e0ef55;
+}
+
+.colors h2{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.colors h2, .colors h3{
+    color: #00f5d4;
+    text-shadow: 0 0 4px #00f5d488;
+
+}
+
+.demo-button {
+    border-radius: 0.4em;
+    padding: 0.4em 1em;
+    font-weight: bold;
+    border: 1px solid #90e0ef;
+    cursor: pointer;
+    color: #1f1f1f;
+    background-color: #2be2e2;
+    box-shadow: 0 0 6px rgba(0, 245, 212, 0.3);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.demo-button:hover {
+    background-color: #00f5d4;
+    box-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+.colors a{
+    color: #00d9ff;
+    text-decoration: none;
+}
+
+.colors a:hover {
+    color: #00f5d4;
+    text-shadow: 0 0 4px #00f5d4;
+}
+
+.colors li {
+    margin-bottom: 0.5em;
+}
+
+.wireframe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    width: 800px;
+}
+
+.wireframe h2{
+    grid-column: 1/-1;
+}
+
+.wireframe img{
+    width: 350px;
+    flex-direction: row;
+}
+
+footer{
+    border-top: dotted black 1px;
+    padding: 1em;
+}
+
