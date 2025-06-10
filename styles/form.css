@@ -7,6 +7,7 @@
 h1{
     text-align: center;
     padding-top: 1em;
+    color: #2563eb;
 }
 
 fieldset{
@@ -22,10 +23,13 @@ fieldset{
 }
 
 label, p{
-    padding: .5em;
     width: 100%;
+    padding: .5rem;
 }
 
+label:has(input[type="checkbox"]) {
+    padding: 0.2em 0;
+}
 
 select,
 textarea,
@@ -43,15 +47,21 @@ input[type="number"]
 
 label input[type="checkbox"]{
     margin-right: 0.5rem;
+    padding: 0.2rem 0;
+}
+
+input[type="checkbox"]{
+    margin-left: 1.5rem;
 }
 
 input[type="date"],
 input[type="number"],
 label input[type="checkbox"],
+input[type="submit"],
 select,
 label
 {
- cursor: pointer;
+    cursor: pointer;
 }
 
 option{
@@ -62,4 +72,125 @@ input[type="submit"]{
     width: 96%;
     padding: .75rem;
     border-radius: .5rem;
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:hover{
+    background-color: #1e40af;
+}
+
+
+.stars input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+
+.stars > label {
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.stars:active{
+    color: gold;
+}
+
+
+.stars > label::before {
+    content: "\2606"; /* ☆ */
+}
+
+
+.stars input:checked ~ label::before {
+    content: "\2605"; /* ★ */
+    color: gold;
+}
+
+
+.stars > label:hover,
+.stars > label:hover ~ label {
+    color: gold;
+}
+
+.stars.user-interacted > label::before {
+    color: red;
+}
+
+.required::before {
+    content: "* ";
+    color: red;
+}
+
+
+input:required,
+select:required
+{
+    border: 1px solid black;
+}
+
+
+input:required:valid,
+select:required:valid
+{
+    border-color: green;
+}
+
+
+input:required:invalid:focus,
+input:required:invalid.user-interacted,
+select:required:invalid:focus,
+select:required:invalid.user-interacted {
+    border-color: red;
+}
+
+.thank-you {
+    text-align: center;
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you h1 {
+    font-size: 2rem;
+}
+
+.thank-you p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.thank-you a {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    border: 1px solid black;
+}
+
+.thank-you a:hover {
+    background-color: #1e40af;
 }
