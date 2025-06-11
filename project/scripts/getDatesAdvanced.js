@@ -1,4 +1,5 @@
-getYearAndLastModified();
+createFooterInfo();
+
 
 
 // get the current year and the last date/time the page was modified
@@ -12,7 +13,7 @@ function getYearAndLastModified() {
   //check current year id is found on page
   if (currentYear) {
     //display the info
-    currentYear.textContent = today.getFullYear();
+    currentYear.innerHTML = "&copy; " + today.getFullYear() + " Donovan Poland - Salt Lake City, Utah";
   }
 
   //check if last modified id is found the page
@@ -50,4 +51,25 @@ function getYearAndLastModified() {
       `Last modified: ${localFormatted} ${formattedOffset}<br>` +
       `Last modified: ${utcFormatted} UTC`;
   }
+}
+
+function createFooterInfo() {
+
+  //get footer tag
+  const footer = document.querySelector("footer");
+  footer.style.textAlign = "center";
+  //create paragraph with id current year
+  const pCurentYear = document.createElement("p")
+  pCurentYear.setAttribute("id", "current-year")
+
+
+  //create paragraph with id last modified
+  const pLastModified = document.createElement("p");
+  pLastModified.setAttribute("id", "last-modified");
+
+
+  //add to page
+  footer.appendChild(pCurentYear)
+  footer.appendChild(pLastModified)
+  getYearAndLastModified();
 }

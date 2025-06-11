@@ -1,0 +1,118 @@
+:root {
+  /* Base Schema */
+  --heading-color: #00f5d4;
+  --heading-shadow: #00f5d488;
+  --text-color: #e6e6e6; /* offwhite */
+  --background-color: #2a2a2a; /* soft charcoal */
+  --border-color: #90e0ef;
+  --link-color: #00d9ff;
+  --link-hover-color: #00f5d4;
+  --button-text: #2a2a2a; /* soft charcoal again */
+  --button-background: #00f5d4;
+  --button-shadow: rgba(0, 245, 212, 1);
+  --button-hover: #2be2e2;
+  --light-overlay:rgba(0, 0, 0, .1);
+  --half-opacity:rgba(0, 0, 0, .5);
+
+  /* Code Snip Schema */
+  --keyword-color: #ff79c6;     /* pinkish */
+  --attribute-color: #8be9fd;   /* cyan */
+  --variable-color: #a8ff60;    /* soft lime */
+  --string-color: #f1fa8c;      /* yellow */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    /* <weight>: Use a value from 100 to 900 */
+    font-weight: 100;
+    font-style: normal;
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+
+h1, h2, h3{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    color: var(--heading-color);    
+    text-shadow: 0 0 4px var(--heading-shadow);
+    z-index: 5;
+}
+
+a{
+    color: var(--link-color);
+    transition: .5s;
+}
+
+a:hover{
+    color: var(--link-hover-color);
+}
+
+.center{
+    text-align: center;
+}
+
+.indent{
+    text-indent: 2em;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: .75em;
+}
+
+.buttons button{
+    color: var(--button-text);
+    max-width: 9rem;
+    min-width: 4rem;
+    padding: 0.4em 1em;
+    border-radius: .4em;
+    border: 1px solid var(--border-color);
+    background-color: var(--button-background);
+    box-shadow: 0 0 8px var(--button-shadow);
+    transition: background-color 0.2s ease, box-shadow .3s ease;
+}
+
+.buttons button:hover {
+    background-color: var(--button-hover);
+    box-shadow: 0 0 12px var(--button-shadow);
+    scale: 1.1;
+}
+
+
+/* Code Syntax Classes */
+.code{
+    font-family: "Source Code Pro", monospace;
+    /* <weight>: Use a value from 200 to 900 */
+    font-weight: 200;
+    font-style: normal;
+}
+
+.keyword {
+  color: var(--keyword-color); /* #ff79c6 (pinkish) */
+}
+
+.attribute {
+  color: var(--attribute-color); /* #8be9fd (cyan) */
+}
+
+.variable {
+  color: var(--variable-color); /* #a8ff60 (soft lime) */
+}
+
+.string {
+  color: var(--string-color); /* #f1fa8c (yellow) */
+}
