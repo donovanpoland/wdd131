@@ -1,0 +1,103 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem clamp(1rem, 5vw, 4rem);
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--heading-shadow);
+    height: fit-content;
+    width: 100%;
+    gap: .5em; 
+}
+
+.navigation ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.navigation a:hover {
+  color: #00f5d4;
+  text-shadow: 0 0 6px rgba(0, 245, 212, 0.5);
+}
+
+.active{
+  color: #00f5d4;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(0, 245, 212, 0.5);
+  border-bottom: 2px dotted var(--border-color);
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: var(--background-color);
+  color: var(--heading-color);
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  bottom: -2.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--button-shadow);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: .75em;
+}
+
+.btn {
+  color: var(--button-text);
+  max-width: 9rem;
+  min-width: 4rem;
+  padding: 0.4em 1em;
+  border-radius: 0.4em;
+  border: 1px solid var(--border-color);
+  background-color: var(--button-background);
+  box-shadow: 0 0 8px var(--button-shadow);
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.btn:hover {
+  color: var(--button-text);
+  background-color: var(--button-hover);
+  box-shadow: 0 0 12px var(--button-shadow);
+  scale: 1.1;
+}

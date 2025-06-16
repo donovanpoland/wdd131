@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title goes here</title>
+<title>CodeQuest - Lore Book</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="Keywords go here.">
@@ -9,35 +9,104 @@
 <meta name="description" content="replace with page description">
 <meta name="robots" content="index, follow">
 <!-- Scripts -->
-<script src="scripts/" defer></script>
+<script src="scripts/script.js" defer></script>
 <script src="scripts/getDatesAdvanced.js" defer></script>
 <!-- CSS style sheets -->
- <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/navigation.css">
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/lorebook.css">
 <!-- Font links-->
+<link rel="preconnect" 
+    href="https://fonts.googleapis.com">
+<link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" 
+    crossorigin>
+<link 
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" 
+    rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>CodeQuest</h1>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#" class="tooltip">The Codex<span class="tooltip-text">Uncover the secrets of syntax</span></a></li>
-                <li><a href="lorebook.html" class="tooltip">Lorebook<span class="tooltip-text">Why Code Quest exists</span></a></li>
-            </ul>
-        </nav>
-    </header>
-<!--If no javascript is detected display this setting-->
+    <!--If no javascript is detected display this setting-->
     <noscript>
         <div class="noscript-warning">
           ⚠️ JavaScript is required to view this site correctly. Please enable JavaScript in your browser settings and Reload this page.
         </div>
     </noscript>
-    <main>
-        <h2></h2>
-        <section>
-            <h3></h3>
+    <header>
+        <h1>CodeQuest</h1>
+        <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="codex.html" class="tooltip">The Codex<span class="tooltip-text">Uncover the secrets of syntax</span></a></li>
+                    <li><a href="#" class="tooltip active">Lore Book<span class="tooltip-text">Why Code Quest exists</span></a></li>
+                </ul>
+            </nav>
+    </header>
+    <div id="menu-backdrop"></div>
+    <main class="grid">
+        <section class="origin">
+            <h2>Why CodeQuest?</h2>
+            <div class="indent">
+            <p>
+                CodeQuest was born from a desire to make programming feel like an adventure — not a chore.
+                Instead of dumping walls of text, we guide users through clear, interactive concepts powered
+                by real-world structure and visual clarity.
+            </p>
+            <br>
+            <p>
+                Our mission is to demystify programming through structure, style, and storytelling.
+                We believe learning to code should feel intuitive, immersive, and even a little magical.
+            </p>
+            <br>
+            <p>
+                Unlike traditional resources that throw walls of syntax with little explanation, CodeQuest
+                breaks down each topic with visual examples, side-by-side comparisons, and guided paths.
+                No fluff. No confusion. Just glowing clarity.
+            </p>
+            <br>
+            <p>
+                CodeQuest began as a personal tool to teach friends and newcomers — and quickly grew into
+                something much bigger. Whether you're brand new or brushing up, we're glad you're here.
+            </p>
+            </div>
         </section>
-    
+        <section class="features">
+            <h2>Features That Define the Journey</h2>
+            <ul class="feature-list">
+                <li><strong>Simplified Learning:</strong> Concepts are broken into bite-sized, beginner-friendly chunks.</li>
+                <li><strong>Tutorials:</strong> Step-by-step walkthroughs designed to build your confidence.</li>
+                <li><strong>Examples:</strong> Learn through practical, real-world code you can actually use.</li>
+                <li><strong>Documentation:</strong> We introduce documentation early and explain everything in plain, beginner-friendly terms.</li>
+                <li><strong>Side-by-Side Syntax:</strong> Compare how different languages express the same logic.</li>
+                <li><strong>Beginner Roadmaps:</strong> Guided paths for each language to help you know where to start.</li>
+                <li><strong>Keyboard Shortcuts:</strong> Learn the essential IDE shortcuts developers use to code faster and smarter.</li>
+                <li><strong>Dark Mode by Default:</strong> Designed for comfort and a glowing aesthetic that doesn't strain your eyes.</li>
+                <li><strong>AI Prompting:</strong> Learn how to use AI to break down problems, not just copy code.</li>
+                <li><strong>Interactive Codex:</strong> Explore syntax by category, with live examples, prompts, and reference links.</li>
+            </ul>
+        </section>
+        <section class="call-to-action">
+            <p class="center">Ready to start your quest? The Codex awaits.</p>
+            <br>
+            <div class="buttons">
+                <a href="codex.html" class="btn">Open The Codex</a>
+            </div>
+        </section>
+        <section class="credits">
+            <h2>Made with 💙 by a Curious Coder</h2>
+            <p class="indent">
+                CodeQuest is an ongoing project built by someone who believes learning to code shouldn't suck.  
+                If you found this helpful, tell a friend. Or better — build something awesome with it.
+            </p>
+            <h3>Connect with me</h3>
+            <div class="buttons">
+                <a href="https://www.linkedin.com/in/donovanpoland/" class="btn" target="_blank">LinkedIn</a>
+                <a href="https://codepen.io/Donovan-Poland" class="btn" target="_blank">CodePen</a>
+                <a href="https://github.com/donovanpoland" class="btn" target="_blank">Git Hub</a>
+            </div>
+        </section>
+                
     </main>
     <footer>
     </footer>

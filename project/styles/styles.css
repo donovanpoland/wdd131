@@ -22,145 +22,74 @@
 }
 
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem clamp(1rem, 5vw, 4rem);
-  background-color: var(--background-color);
-  border-bottom: 2px solid var(--border-color);
-  box-shadow: 0 2px 8px var(--heading-shadow);
-}
-
-.navigation ul {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  list-style: none;
-}
-
-.navigation a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-.navigation a:hover {
-  color: #00f5d4;
-  text-shadow: 0 0 6px rgba(0, 245, 212, 0.5);
-}
-
-.tooltip {
-  position: relative;
-  cursor: pointer;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.tooltip .tooltip-text {
-  visibility: hidden;
-  opacity: 0;
-  width: max-content;
-  background-color: var(--background-color);
-  color: var(--heading-color);
-  text-align: center;
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-  position: absolute;
-  bottom: -2.5em;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px var(--button-shadow);
-  font-size: 0.75rem;
-  white-space: nowrap;
-  z-index: 10;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 
 body{
-    background-color: var(--background-color);
-    font-family: "Roboto", sans-serif;
-    /* <weight>: Use a value from 100 to 900 */
-    font-weight: 100;
-    font-style: normal;
-    color: var(--text-color);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--background-color);
+  font-family: "Roboto", sans-serif;
+  /* <weight>: Use a value from 100 to 900 */
+  font-weight: 100;
+  font-style: normal;
+  color: var(--text-color);
+  /* no gap */
+}
+
+header, main, footer{
+  /* instead of body gap */
+  margin-bottom: 1.5em;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  gap: 1em;
+  position: relative;
 }
 
 h1, h2, h3{
-    font-family: "Audiowide", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-    color: var(--heading-color);    
-    text-shadow: 0 0 4px var(--heading-shadow);
-    z-index: 5;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+  color: var(--heading-color);    
+  text-shadow: 0 0 8px var(--heading-shadow);
+  z-index: 5;
+  margin: 0;
+}
+
+p{
+  max-width: 600px;
 }
 
 a{
-    color: var(--link-color);
-    transition: .5s;
+  color: var(--link-color);
+  transition: .5s;
+  font-style: normal;
 }
 
 a:hover{
-    color: var(--link-hover-color);
+  color: var(--link-hover-color);
 }
 
 .center{
-    text-align: center;
+  text-align: center;
 }
 
 .indent{
-    text-indent: 2em;
+  text-indent: 2em;
 }
-
-.buttons{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: .75em;
-}
-
-.buttons button{
-    color: var(--button-text);
-    max-width: 9rem;
-    min-width: 4rem;
-    padding: 0.4em 1em;
-    border-radius: .4em;
-    border: 1px solid var(--border-color);
-    background-color: var(--button-background);
-    box-shadow: 0 0 8px var(--button-shadow);
-    transition: background-color 0.2s ease, box-shadow .3s ease;
-    font-size: clamp(0.5rem, 2vw, 1rem);
-}
-
-.buttons button:hover {
-    background-color: var(--button-hover);
-    box-shadow: 0 0 12px var(--button-shadow);
-    scale: 1.1;
-}
-
 
 /* Code Syntax Classes */
 .code{
-    font-family: "Source Code Pro", monospace;
-    /* <weight>: Use a value from 200 to 900 */
-    font-weight: 200;
-    font-style: normal;
+  font-family: "Source Code Pro", monospace;
+  /* <weight>: Use a value from 200 to 900 */
+  font-weight: 200;
+  font-style: normal;
 }
 
 .keyword {
@@ -177,4 +106,9 @@ a:hover{
 
 .string {
   color: var(--string-color); /* #f1fa8c (yellow) */
+}
+
+footer p{
+  line-height: 1.5;
+  margin: 0 auto;
 }
