@@ -27,6 +27,68 @@
     box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem clamp(1rem, 5vw, 4rem);
+  background-color: var(--background-color);
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--heading-shadow);
+}
+
+.navigation ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.navigation a:hover {
+  color: #00f5d4;
+  text-shadow: 0 0 6px rgba(0, 245, 212, 0.5);
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: var(--background-color);
+  color: var(--heading-color);
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  bottom: -2.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--button-shadow);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 body{
     background-color: var(--background-color);
@@ -39,7 +101,6 @@ body{
     grid-template-columns: 1fr;
     gap: 1rem;
 }
-
 
 h1, h2, h3{
     font-family: "Audiowide", sans-serif;
@@ -84,6 +145,7 @@ a:hover{
     background-color: var(--button-background);
     box-shadow: 0 0 8px var(--button-shadow);
     transition: background-color 0.2s ease, box-shadow .3s ease;
+    font-size: clamp(0.5rem, 2vw, 1rem);
 }
 
 .buttons button:hover {

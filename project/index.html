@@ -9,11 +9,12 @@
 <meta name="description" content="replace with page description">
 <meta name="robots" content="index, follow">
 <!-- Scripts -->
-<script src="scripts/" defer></script>
+<script src="scripts/script.js" defer></script>
 <script src="scripts/getDatesAdvanced.js" defer></script>
 <!-- CSS style sheets -->
  <link rel="stylesheet" href="styles/styles.css">
  <link rel="stylesheet" href="styles/home.css">
+ <link rel="stylesheet" href="styles/home_media.css">
 <!-- Font links-->
 <link rel="preconnect" 
     href="https://fonts.googleapis.com">
@@ -26,7 +27,7 @@
     rel="stylesheet">
 </head>
 <body>
-     <!--If no javascript is detected display this setting-->
+    <!--If no javascript is detected display this setting-->
     <noscript>
         <div class="noscript-warning">
           ⚠️ JavaScript is required to view this site correctly. Please enable JavaScript in your browser settings and Reload this page.
@@ -38,9 +39,8 @@
         <nav class="navigation">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="">Learn</a></li>
-                <li><a href="">Languages</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#" class="tooltip">The Codex<span class="tooltip-text">Uncover the secrets of syntax</span></a></li>
+                <li><a href="lorebook.html" class="tooltip">Lorebook<span class="tooltip-text">Why Code Quest exists</span></a></li>
             </ul>
         </nav>
     </header>
@@ -48,7 +48,7 @@
         <section class="hero">
             <div>
                 <div class="hero-overlay top">
-                    <h2>Learn Smarter Not Harder</h2>
+                    <h2 class="center">Learn Smarter Not Harder</h2>
                 </div>
                 <picture>
                     <source>
@@ -56,19 +56,19 @@
                     <img src="images/code-quest-logo-original.jpeg" alt="" width="800px">
                 </picture>
                 <div class="hero-overlay bottom">
-                    <h3>Get Started Learning Now!</h3>
+                    <h3 class="center">Get Started Learning Now!</h3>
                     <div class="buttons">
-                        <button>Learn HMTL</button>
+                        <button>Learn HTML</button>
                         <button>Learn CSS</button>
                         <button>Learn JavaScript</button>
                     </div>
                 </div>
             </div>
             <article class="summary">
-                <p class="indent"> Code Quest is a beginner-friendly learning platform designed
+                <p class="indent bottom-border"> Code Quest is a beginner-friendly learning platform designed
                     to make programming easier to understand and more fun to explore.
                     Whether you're new to code or brushing up your syntax, 
-                    our goal is to help you learn smarter—not harder.
+                    our goal is to help you learn smarter—not harder.<br><br>
                 </p>
                 <br>
                 <p class="indent"> We break down each language with visual examples,
@@ -81,7 +81,7 @@
         <section class="languages">
             <h2 class="center">Languages</h2>
             <div class="buttons">
-                <button>HMTL</button>
+                <button>HTML</button>
                 <button>CSS</button>
                 <button>JavaScript</button>
                 <button>Python</button>
