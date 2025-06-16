@@ -47,7 +47,7 @@ header, main, footer{
 
 .grid{
   display: grid;
-  grid-template-columns: 15% 1fr 15%;
+  grid-template-columns: 1fr;
   gap: 1em;
   position: relative;
 }
@@ -59,7 +59,6 @@ h1, h2, h3{
   color: var(--heading-color);    
   text-shadow: 0 0 8px var(--heading-shadow);
   z-index: 5;
-  margin: 0;
 }
 
 p{

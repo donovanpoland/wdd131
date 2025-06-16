@@ -1,6 +1,5 @@
 
 .hero, .languages, .highlights{
-    grid-column: 2/3;
     background-color: var(--light-overlay);
     border-radius: .5rem;
     padding: 1rem;
@@ -35,6 +34,12 @@
   max-width: 800px;
   border-radius: .5rem;
   margin: 0 auto;
+}
+
+.hero-overlay{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 

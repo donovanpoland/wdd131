@@ -25,4 +25,12 @@
         left: 50%;
     }
 
+    .grid{
+        grid-template-columns: 15% 1fr 15%;
+    }
+
+    .hero, .languages, .highlights{
+        grid-column: 2/3;
+    }
+
 }
