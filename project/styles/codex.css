@@ -12,3 +12,17 @@
 .concept-output{
     grid-row: 3;
 }
+
+button.active {
+    outline: 2px solid var(--border-color-color);
+    background-color: var(--button-hover);
+    color: var(--button-text);
+    font-weight: bold;
+    box-shadow: 0 0 12px var(--button-shadow);
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}

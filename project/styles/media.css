@@ -1,18 +1,18 @@
 @media (min-width: 50em){
 
     .hero-overlay{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: relative;
-    transform: translateX(-50%);
-    z-index: 2;
-    background-color:  var(--half-opacity);
-    text-align: center;
-    border-radius: .5rem;
-    padding: .5em;
-    width: max-content;
-    gap: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        transform: translateX(-50%);
+        z-index: 2;
+        background-color:  var(--half-opacity);
+        text-align: center;
+        border-radius: .5rem;
+        padding: .5em;
+        width: max-content;
+        gap: 1em;
     }
 
     .top{
@@ -30,9 +30,9 @@
     }
 
     .concept-output{
-    grid-column: 2/3;
-    grid-row: 1;
-    max-width: 100%;
+        grid-column: 2/3;
+        grid-row: 1;
+        max-width: 100%;
     }
 
     .category-selector{
