@@ -1,26 +1,24 @@
 
-.hero, .languages, .highlights{
+.hero, .languages, .highlights, .join{
     background-color: var(--light-overlay);
     border-radius: .5rem;
     padding: 1rem;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 8px var(--heading-shadow);
-}
-
-.languages{
+    /* default to grid location when on larger or smaller screens */
+    grid-column: 2/3;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
     gap: 1em;
 }
 
 .hero{
     position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-    align-items: center;
+
 }
 
 .bottom-border{
@@ -45,14 +43,15 @@
 
 .highlights{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-wrap: wrap;
-    gap: 1rem;
 }
 
 .highlights h2{
     flex: 0 0 100%;
+    text-align: center;
 }
 
 .highlights article{
@@ -60,6 +59,7 @@
     border-radius: .5em;
     padding: .4rem;
     width: 200px;
+    height: 200px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -81,5 +81,69 @@
 
 .highlights article p::after{
     content: ".";
+}
+
+/*--------- Form styling --------*/
+
+.news-letter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.news-letter fieldset{
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 12px #00f5d4aa;
+}
+
+.news-letter legend{
+    color: var(--heading-color);
+    margin-left: 25%;
+    padding: 0 .5rem 0;
+    background-color: transparent;
+}
+
+.news-letter label{
+    display: block;
+    padding-top: 1rem;
+    color: var(--heading-color);
+    font-size: .9rem;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+.required::before {
+    content: "* ";
+    color: red;
+}
+
+.news-letter input[type="text"],
+.news-letter input[type="email"]
+{
+    display: block;
+    width: 100%;
+    border-radius: .5rem;
+    padding: .75rem;
+    background-color: var(--text-color);
+}
+
+.news-letter input:focus {
+    border: 2px solid var(--border-color);
+    outline: none;
+    box-shadow: 0 0 8px var(--heading-shadow)
+}
+
+.news-letter input[type="submit"]{
+    width: 94%;
+}
+
+.thanks{
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    padding: .5rem;
+    box-shadow: 0 0 8px var(--heading-shadow)
 }
 

@@ -33,3 +33,10 @@ const inludesSeven = numbers.includes(7);
 //display bool
 console.log("includes 2? :" + inludesTwo)
 console.log("includes 7? :" + inludesSeven)
+
+
+let product = { 'id': '455689A', 'price': 23.99, 'cost': 15, 'shelfDate': '10/01/2024' }
+
+let itemCost = product['cost'];
+
+console.log(itemCost)

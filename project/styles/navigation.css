@@ -81,9 +81,8 @@ header {
 
 .btn {
   color: var(--button-text);
-  max-width: 9rem;
-  min-width: 4rem;
-  padding: 0.4em 1em;
+  min-width: 7rem;
+  padding: .75rem;
   border-radius: 0.4em;
   border: 1px solid var(--border-color);
   background-color: var(--button-background);

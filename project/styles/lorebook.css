@@ -1,5 +1,4 @@
 .origin, .features, .call-to-action, .credits{
-    grid-column: 2/3;
     background-color: var(--light-overlay);
     border-radius: .5rem;
     padding: 1rem;
@@ -9,6 +8,30 @@
     flex-direction: column;
     align-items: center;
     line-height: 1.5;
+    gap: .5em;
+    /* default to grid location when on larger or smaller screens */
+    grid-column: 2/3;
+    
 }
+
+.features ul{
+    margin-left: 1rem;
+}
+
+.features .btn{
+    text-wrap: none;
+}
+
+@media (min-width: 45rem){
+
+
+    .grid{
+        grid-template-columns: 15% 1fr 15%;
+    }
+
+}
+
+
+
 
 
