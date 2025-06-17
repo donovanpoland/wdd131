@@ -1,4 +1,4 @@
-@media (min-width: 45rem){
+@media (min-width: 50em){
 
     .hero-overlay{
     display: flex;
@@ -26,8 +26,18 @@
     }
 
     .grid{
-        grid-template-columns: 15% 1fr 15%;
+        grid-template-columns: 20% 1fr 20%;
     }
 
+    .concept-output{
+    grid-column: 2/3;
+    grid-row: 1;
+    max-width: 100%;
+    }
+
+    .category-selector{
+        grid-column: 3/4;
+        grid-row: 1;
+    } 
 
 }

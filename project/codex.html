@@ -9,11 +9,13 @@
 <meta name="description" content="replace with page description">
 <meta name="robots" content="index, follow">
 <!-- Scripts -->
-<script src="scripts/script.js" defer></script>
+<script src="scripts/codex.js" defer></script>
 <script src="scripts/getDatesAdvanced.js" defer></script>
 <!-- CSS style sheets -->
 <link rel="stylesheet" href="styles/navigation.css">
 <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/codex.css">
+<link rel="stylesheet" href="styles/media.css">
 <!-- Font links-->
 <link rel="preconnect" 
     href="https://fonts.googleapis.com">
@@ -45,19 +47,53 @@
     </noscript>
     <div id="menu-backdrop"></div>
     <main class="grid">
-        <section class="languages">
-            <h2 class="center">Languages</h2>
-            <div class="buttons">
-                <a href="" class="btn">HTML</a>
-                <a href="" class="btn">CSS</a>
-                <a href="" class="btn">JavaScript</a>
-                <a href="" class="btn">Python</a>
-                <a href="" class="btn">Java</a>
-                <a href="" class="btn">C#</a>
-                <a href="" class="btn">SQL</a>
+        <section class="selections">
+            <h2 class="center">Choose a Language</h2>
+                <h3 class="center">Current Language</h3>
+
+                <div class="buttons current-lang">
+                    <button class="btn" data-language="html">HTML</button>
+                    <button class="btn" data-language="css">CSS</button>
+                    <button class="btn" data-language="js">JavaScript</button>
+                    <button class="btn" data-language="python">Python</button>
+                    <button class="btn" data-language="java">Java</button>
+                    <button class="btn" data-language="csharp">C#</button>
+                    <button class="btn" data-language="sql">SQL</button>
+                </div>
+
+                <h3 class="center" id="second-lang">Comparison Language</h3>
+
+                <div class="buttons second-lang" >
+                    <button class="btn" data-language="html">HTML</button>
+                    <button class="btn" data-language="css">CSS</button>
+                    <button class="btn" data-language="js">JavaScript</button>
+                    <button class="btn" data-language="python">Python</button>
+                    <button class="btn" data-language="java">Java</button>
+                    <button class="btn" data-language="csharp">C#</button>
+                    <button class="btn" data-language="sql">SQL</button>
+                </div>
+        </section>
+
+        <section class="selections concept-output" id="output-section">
+            <h1 id="concept-title" class="center">Select a Language and Concept</h1>
+            <div id="concept-content">
+            <!-- JS will populate this dynamically -->
             </div>
         </section>
-    
+
+        <section class="selections category-selector" id="concept-section">
+            <h2 class="center">Choose a Concept</h2>
+            <div class="buttons">
+                <button data-category="keywords" class="btn">Keywords</button>
+                <button data-category="variables" class="btn">Variables</button>
+                <button data-category="attributes" class="btn">Attributes</button>
+                <button data-category="functions" class="btn">Functions</button>
+                <button data-category="loops" class="btn">Loops</button>
+                <button data-category="conditionals" class="btn">Conditionals</button>
+                <button data-category="arrays" class="btn">Arrays / Lists</button>
+                <button data-category="objects" class="btn">Objects</button>
+            </div>
+        </section>
     </main>
     <footer>
     </footer>

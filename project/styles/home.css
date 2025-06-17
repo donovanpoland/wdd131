@@ -1,18 +1,12 @@
 
 .hero, .languages, .highlights, .join{
-    background-color: var(--light-overlay);
-    border-radius: .5rem;
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px var(--heading-shadow);
     /* default to grid location when on larger or smaller screens */
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+
     align-items: center;
     justify-content: space-evenly;
-    gap: 1em;
 }
 
 .hero{

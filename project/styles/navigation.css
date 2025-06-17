@@ -81,7 +81,7 @@ header {
 
 .btn {
   color: var(--button-text);
-  min-width: 7rem;
+  min-width: 6.5rem;
   padding: .75rem;
   border-radius: 0.4em;
   border: 1px solid var(--border-color);
@@ -92,6 +92,10 @@ header {
   text-decoration: none;
   display: inline-block;
   font-weight: 500;
+}
+
+.btn a, .btn button{
+    text-wrap: wrap;
 }
 
 .btn:hover {
